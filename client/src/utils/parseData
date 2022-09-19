@@ -1,0 +1,28 @@
+export default function(data) {
+let latdegrees = (data.GPSLatitude[0].numerator) / (data.GPSLatitude[0].denominator);
+let latminutes = (data.GPSLatitude[1].numerator) / (data.GPSLatitude[1].denominator);
+let latseconds = (data.GPSLatitude[2].numerator) / (data.GPSLatitude[2].denominator);
+
+let latitude = latdegrees + (latminutes / 60) + (latseconds / 3600);
+
+if (data.GPSLatitudeRef === "S") {
+latitude = -latitude
+}
+
+let longdegrees = (data.GPSLongitude[0].numerator) / (data.GPSLongitude[0].denominator);
+let longminutes = (data.GPSLongitude[1].numerator) / (data.GPSLongitude[1].denominator);
+let longseconds = (data.GPSLongitude[2].numerator) / (data.GPSLongitude[2].denominator);
+
+let longitude = longdegrees + (longminutes / 60) + (longseconds / 3600);
+
+if (data.GPSLongitudeRef === "W") {
+longitude = -longitude
+}
+
+console.log(latitude + ", " + longitude)
+
+return [latitude, longitude];
+}
+
+
+

@@ -1,0 +1,37 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Location-based photo game",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "watch": "nodemon server.js",
+    "seed": "node seeds/seeds.js"
+  },
+  "keywords": [
+    "MERN",
+    "React",
+    "Express",
+    "MongoDB",
+    "Mongoose",
+    "Node",
+    "Apollo",
+    "Stripe",
+    "GraphQL",
+    "Full-stack"
+  ],
+  "author": "Nathan Howes, Rakibul Islam, Trent Dickson",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-express": "^3.6.2",
+    "bcrypt": "^5.0.1",
+    "express": "^4.17.1",
+    "graphql": "^16.3.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.10",
+    "stripe": "^8.67.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}

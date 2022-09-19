@@ -8,17 +8,17 @@ const expiration = '2h';
 module.exports = {
   // function for our authenticated routes
   // authMiddleware: function ({req}) {
-  authMiddleware: function (req, res, next) {
-    req.user = {
-      username: "Nate",
-      email:"nate@gmail.com",
-      _id: "62e2daeda656ec21bcc0855a",
-    }
-    // temporary
-    return req;
+  authMiddleware: function (req) {
+    // req.user = {
+    //   username: "Nate",
+    //   email:"nate@gmail.com",
+    //   _id: "62e2daeda656ec21bcc0855a",
+    // }
+    // // temporary
+    // return req;
 
     // allows token to be sent via  req.query or headers
-    let token = req.query.token || req.headers.authorization;
+    let token = req.body.token || req.query.token || req.headers.authorization;
 
     // ["Bearer", "<tokenvalue>"]
     if (req.headers.authorization) {
@@ -26,7 +26,7 @@ module.exports = {
     }
 
     if (!token) {
-      return res.status(400).json({ message: 'You have no token!' });
+      return req;
     }
 
     // verify token and get user data out of it
@@ -35,7 +35,6 @@ module.exports = {
       req.user = data;
     } catch {
       console.log('Invalid token');
-      return res.status(400).json({ message: 'invalid token!' });
     }
 
 return req;

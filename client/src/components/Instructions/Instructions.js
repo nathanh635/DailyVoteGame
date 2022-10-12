@@ -1,8 +1,8 @@
-import * as React from 'react';
+import React from 'react';
 
 
 
-export const Instructions = () => (
+const Instructions = () => (
 
 <>
   <h2>Instructions</h2>
@@ -12,4 +12,4 @@ export const Instructions = () => (
 
 )
 
-export default Footer;
+export default Instructions;

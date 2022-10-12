@@ -1,4 +1,4 @@
-const User = require('./User');
+const Matchup = require('./Matchup');
 const Post = require('./Post');
 const Catch = require('./Catch');
 

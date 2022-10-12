@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import NoMatch from './pages/NoMatch';
-import Profile from './pages/Profile';
+import Leaderboard from './pages/Leaderboard';
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
       <div className="container">
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/profile/:username" component={Profile} />
+          <Route exact path="/leaderboard" component={Leaderboard} />
           <Route component={NoMatch} />
         </Switch>
       </div>

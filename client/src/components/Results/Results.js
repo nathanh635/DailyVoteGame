@@ -16,7 +16,6 @@ const Vote = () => {
     method: 'POST',
     mode: 'no-cors',
     headers: {
-    //   'Content-Type': 'application/json',
           'Client-ID': '3zgt5j9ljrim561y47g3n6vz1j29s8',
           'Authorization': 'Bearer 0u4rhob7ua6cvl6nnynd3ra5i03bju' }
   };
@@ -27,8 +26,7 @@ const Vote = () => {
     return result})
   .catch(error => console.log('error', error));
 
-  <canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
-Your browser does not support the HTML5 canvas tag.</canvas>
+
 
   var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
@@ -38,20 +36,8 @@ ctx.stroke();
 
   return (
     <>
-              <Button
-          type='submit'
-
-          variant='success'
-          size="lg">
-          {game1.name}
-        </Button>
-        <Button
-          type='submit'
-          variant='primary'
-          size="lg">
-          {game2.name}
-        </Button>
-        <Instructions />
+               <canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
 
     </>
   );

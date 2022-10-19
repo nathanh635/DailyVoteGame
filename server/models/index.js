@@ -1,5 +1,4 @@
 const Matchup = require('./Matchup');
-const Post = require('./Post');
-const Catch = require('./Catch');
+const Game = require('./Game');
 
-module.exports = { User, Post, Catch };
+module.exports = { Game, Matchup };

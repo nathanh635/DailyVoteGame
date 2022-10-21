@@ -1,7 +1,7 @@
 const { Schema, model } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
 
-const catchSchema = new Schema({
+const gameSchema = new Schema({
   image: {
     type: String
   },
@@ -22,6 +22,6 @@ const catchSchema = new Schema({
 
 });
 
-const Catch = model('Catch', catchSchema);
+const Game = model('Game', gameSchema);
 
-module.exports = Catch;
+module.exports = Game;
